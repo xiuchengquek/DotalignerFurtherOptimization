@@ -1,3 +1,7 @@
 venv
 data/ps
 data/ps.tar.gz
+src/dotaligner_shell_scripts/
+snakejob.*
+out/*.out
+.snakemake/
