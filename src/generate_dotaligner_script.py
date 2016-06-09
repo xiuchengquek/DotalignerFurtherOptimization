@@ -2,8 +2,8 @@
 
 
 import argparse
-from src.dotalignerWrapper.dotalignerWrapper import DotAlignerGrouped
-from src.dotalignerWrapper.parameterFileParser import parse_param_file, parse_pairwise_alignments
+from dotalignerWrapper.dotalignerWrapper import DotAlignerGrouped
+from dotalignerWrapper.parameterFileParser import parse_param_file, parse_pairwise_alignments
 
 
 parser = argparse.ArgumentParser(description='Dotaligner Wrapper - Current only print bash scripts ')
