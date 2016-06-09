@@ -94,11 +94,11 @@
               </provider>
             </entry>
           </file>
-          <file leaf-file-name="generate_dotaligner_script.py" pinned="false" current-in-tab="true">
+          <file leaf-file-name="generate_dotaligner_script.py" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/src/generate_dotaligner_script.py">
               <provider selected="true" editor-type-id="text-editor">
-                <state vertical-scroll-proportion="0.23483871">
-                  <caret line="14" column="23" selection-start-line="14" selection-start-column="23" selection-end-line="14" selection-end-column="23" />
+                <state vertical-scroll-proportion="0.0">
+                  <caret line="36" column="36" selection-start-line="36" selection-start-column="36" selection-end-line="36" selection-end-column="36" />
                   <folding>
                     <element signature="e#3#18#0" expanded="true" />
                   </folding>
@@ -116,11 +116,11 @@
               </provider>
             </entry>
           </file>
-          <file leaf-file-name="dotalignerWrapper.py" pinned="false" current-in-tab="false">
+          <file leaf-file-name="dotalignerWrapper.py" pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/src/dotalignerWrapper/dotalignerWrapper.py">
               <provider selected="true" editor-type-id="text-editor">
-                <state vertical-scroll-proportion="0.0">
-                  <caret line="94" column="49" selection-start-line="94" selection-start-column="49" selection-end-line="94" selection-end-column="49" />
+                <state vertical-scroll-proportion="0.8554839">
+                  <caret line="55" column="30" selection-start-line="55" selection-start-column="30" selection-end-line="55" selection-end-column="30" />
                   <folding>
                     <element signature="e#1#10#0" expanded="true" />
                   </folding>
@@ -135,7 +135,7 @@
           <file leaf-file-name="test_parameterFileParser.py" pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/src/dotalignerWrapper/test_parameterFileParser.py">
               <provider selected="true" editor-type-id="text-editor">
-                <state vertical-scroll-proportion="-0.63741934">
+                <state vertical-scroll-proportion="-1.9419355">
                   <caret line="35" column="51" selection-start-line="35" selection-start-column="51" selection-end-line="35" selection-end-column="51" />
                   <folding>
                     <element signature="e#0#15#0" expanded="true" />
@@ -164,11 +164,11 @@
         <option value="$PROJECT_DIR$/src/dotalignerWrapper/test_paramterFileParsers.py" />
         <option value="$PROJECT_DIR$/src/__init__.py" />
         <option value="$PROJECT_DIR$/generate_shell_script.snakmake" />
-        <option value="$PROJECT_DIR$/src/dotalignerWrapper/dotalignerWrapper.py" />
         <option value="$PROJECT_DIR$/src/dotalignerWrapper/test_parameterFileParser.py" />
         <option value="$PROJECT_DIR$/src/dotalignerWrapper/parameterFileParser.py" />
         <option value="$PROJECT_DIR$/data/parameters_list.txt" />
         <option value="$PROJECT_DIR$/src/generate_dotaligner_script.py" />
+        <option value="$PROJECT_DIR$/src/dotalignerWrapper/dotalignerWrapper.py" />
       </list>
     </option>
   </component>
@@ -568,16 +568,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/dotalignerWrapper/dotalignerWrapper.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="94" column="49" selection-start-line="94" selection-start-column="49" selection-end-line="94" selection-end-column="49" />
-          <folding>
-            <element signature="e#1#10#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/data/pairwise_alignments.list">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -624,10 +614,20 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/generate_dotaligner_script.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.23483871">
-          <caret line="14" column="23" selection-start-line="14" selection-start-column="23" selection-end-line="14" selection-end-column="23" />
+        <state vertical-scroll-proportion="0.0">
+          <caret line="36" column="36" selection-start-line="36" selection-start-column="36" selection-end-line="36" selection-end-column="36" />
           <folding>
             <element signature="e#3#18#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/dotalignerWrapper/dotalignerWrapper.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.8554839">
+          <caret line="55" column="30" selection-start-line="55" selection-start-column="30" selection-end-line="55" selection-end-column="30" />
+          <folding>
+            <element signature="e#1#10#0" expanded="true" />
           </folding>
         </state>
       </provider>

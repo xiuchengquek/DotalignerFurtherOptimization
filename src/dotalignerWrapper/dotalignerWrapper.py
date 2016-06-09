@@ -51,6 +51,9 @@ class DotAlignerWrapper:
 
             for pairs in self.pairs:
                 sequence_a , sequence_b = pairs
+                if self.prefix:
+                    sequence_a = os.path.join(self.prefix, sequence_a)
+                    sequence_b = os.path.join(self.prefix, sequence_b)
                 dotaligner_command = "(time -f '\t%E\t%M' {dotaligner} -k {k} -t {t} -o {o}" \
                                      " -e {e} -S {S} -T {T} {sequence_a}_dp.pp {sequence_b}_dp.pp; ) >> out/k_{k}-t_{t}-o_{o}-e_{e}-T_{T}.dotaligner.out 2>&1".format(
                     dotaligner=self.dot_aligner,
