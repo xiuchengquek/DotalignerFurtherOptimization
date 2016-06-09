@@ -12,7 +12,7 @@ parser = argparse.ArgumentParser(description='Dotaligner Wrapper - Current only 
 parser.add_argument('-s' , '--seq' , help = "pairwise alignment list", required=True)
 parser.add_argument('-p' , '--para' , help = "parameter files", required=True)
 parser.add_argument('-d' , '--dotaligner', help = 'path to the dotaligner', required=True)
-parser.add_argument('-d' , '--prefix', help = 'directory prefix')
+parser.add_argument('-r' , '--prefix', help = 'directory prefix')
 
 
 
