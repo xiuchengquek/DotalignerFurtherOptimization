@@ -55,7 +55,7 @@ class DotAlignerWrapper:
                     sequence_a = os.path.join(self.prefix, sequence_a)
                     sequence_b = os.path.join(self.prefix, sequence_b)
                 dotaligner_command = "(/usr/bin/time -f '\\t%E\\t%M' {dotaligner} -k {k} -t {t} -o {o}" \
-                                     " -e {e} -s {S} -T {T} -d {sequence_a}_dp.pp -d {sequence_b}_dp.pp; ) >> out/k_{k}-t_{t}-o_{o}-e_{e}-T_{T}.dotaligner.out 2>&1".format(
+                                     " -e {e} -s {S} -T {T} -d {sequence_a}_dp.pp -d {sequence_b}_dp.pp; ) >> out/e-{e}_o-{o}-t_{t}-k_{k}-T_{T}-S_{S}.dotaligner.out 2>&1".format(
                     dotaligner=self.dot_aligner,
                     k = parameters['k'],
                     t = parameters['t'],
@@ -102,8 +102,9 @@ class DotAlignerGrouped(DotAlignerWrapper):
     def run_dotaligner(self, command, pairs, parameters):
         sample_name = []
         for key, value in parameters.items():
-            sample_name.append(key)
-            sample_name.append(value)
+            name = "%s-%s" % (key, value)
+            sample_name.append(name)
+
         sample_name = "_".join(sample_name)
 
         if self.current_id is None:

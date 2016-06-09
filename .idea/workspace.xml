@@ -21,7 +21,7 @@
     <favorites_list name="DotalignerFurtherOptimization" />
   </component>
   <component name="FileEditorManager">
-    <splitter split-orientation="horizontal" split-proportion="0.39881766">
+    <splitter split-orientation="horizontal" split-proportion="0.5961801">
       <split-first>
         <leaf>
           <file leaf-file-name="README.md" pinned="false" current-in-tab="false">
@@ -84,11 +84,21 @@
               </provider>
             </entry>
           </file>
-          <file leaf-file-name="parameters_list.txt" pinned="false" current-in-tab="true">
+          <file leaf-file-name="parameters_list.txt" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/data/parameters_list.txt">
               <provider selected="true" editor-type-id="text-editor">
-                <state vertical-scroll-proportion="0.07017544">
+                <state vertical-scroll-proportion="-1.925926">
                   <caret line="4" column="1" selection-start-line="4" selection-start-column="1" selection-end-line="4" selection-end-column="1" />
+                  <folding />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="rundotalginer.snakemake" pinned="false" current-in-tab="true">
+            <entry file="file://$PROJECT_DIR$/rundotalginer.snakemake">
+              <provider selected="true" editor-type-id="text-editor">
+                <state vertical-scroll-proportion="0.48697916">
+                  <caret line="17" column="0" selection-start-line="17" selection-start-column="0" selection-end-line="17" selection-end-column="0" />
                   <folding />
                 </state>
               </provider>
@@ -120,7 +130,7 @@
             <entry file="file://$PROJECT_DIR$/src/dotalignerWrapper/dotalignerWrapper.py">
               <provider selected="true" editor-type-id="text-editor">
                 <state vertical-scroll-proportion="0.0">
-                  <caret line="56" column="63" selection-start-line="56" selection-start-column="63" selection-end-line="56" selection-end-column="63" />
+                  <caret line="65" column="44" selection-start-line="65" selection-start-column="44" selection-end-line="65" selection-end-column="44" />
                   <folding>
                     <element signature="e#1#10#0" expanded="true" />
                   </folding>
@@ -176,9 +186,11 @@
         <option value="$PROJECT_DIR$/generate_shell_script.snakmake" />
         <option value="$PROJECT_DIR$/src/dotalignerWrapper/parameterFileParser.py" />
         <option value="$PROJECT_DIR$/src/generate_dotaligner_script.py" />
-        <option value="$PROJECT_DIR$/src/dotalignerWrapper/dotalignerWrapper.py" />
         <option value="$PROJECT_DIR$/src/dotalignerWrapper/test_parameterFileParser.py" />
         <option value="$PROJECT_DIR$/data/parameters_list.txt" />
+        <option value="$PROJECT_DIR$/src/dotalignerWrapper/dotalignerWrapper.py" />
+        <option value="$PROJECT_DIR$/rundotalginer.snakemake.py" />
+        <option value="$PROJECT_DIR$/rundotalginer.snakemake" />
       </list>
     </option>
   </component>
@@ -518,7 +530,7 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="2560" height="1406" extended-state="0" />
-    <editor active="false" />
+    <editor active="true" />
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.12668785" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -528,7 +540,7 @@
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.39421612" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.39421612" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="true" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.39984882" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
@@ -610,16 +622,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/generate_dotaligner_script.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="36" column="36" selection-start-line="36" selection-start-column="36" selection-end-line="36" selection-end-column="36" />
-          <folding>
-            <element signature="e#3#18#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/dotalignerWrapper/test_parameterFileParser.py">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -638,16 +640,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/dotalignerWrapper/dotalignerWrapper.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="56" column="63" selection-start-line="56" selection-start-column="63" selection-end-line="56" selection-end-column="63" />
-          <folding>
-            <element signature="e#1#10#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/data/pairwise_alignments.list">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -656,10 +648,38 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/generate_dotaligner_script.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="36" column="36" selection-start-line="36" selection-start-column="36" selection-end-line="36" selection-end-column="36" />
+          <folding>
+            <element signature="e#3#18#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/data/parameters_list.txt">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.07017544">
+        <state vertical-scroll-proportion="-1.925926">
           <caret line="4" column="1" selection-start-line="4" selection-start-column="1" selection-end-line="4" selection-end-column="1" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/dotalignerWrapper/dotalignerWrapper.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="65" column="44" selection-start-line="65" selection-start-column="44" selection-end-line="65" selection-end-column="44" />
+          <folding>
+            <element signature="e#1#10#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/rundotalginer.snakemake">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.48697916">
+          <caret line="17" column="0" selection-start-line="17" selection-start-column="0" selection-end-line="17" selection-end-column="0" />
           <folding />
         </state>
       </provider>

@@ -1,0 +1,22 @@
+
+
+import os
+
+
+dot_aligner_files = os.listdir('src/dotaligner_shell_scripts')
+dot_aligner_files = [os.path.join('src/dotaligner_shell_scripts', x) for x in dot_aligner_files ]
+
+rule all:
+    input : dot_aligner_files
+
+
+rule run_script:
+    input: 'src/dot_aligner_files/{files}'
+    output:  'out/{files}.dotaligner.out'
+    shell : './{input}'
+
+
+
+
+
+
