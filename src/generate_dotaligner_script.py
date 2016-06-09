@@ -4,6 +4,7 @@
 import argparse
 from dotalignerWrapper.dotalignerWrapper import DotAlignerGrouped
 from dotalignerWrapper.parameterFileParser import parse_param_file, parse_pairwise_alignments
+import os
 
 
 parser = argparse.ArgumentParser(description='Dotaligner Wrapper - Current only print bash scripts ')
@@ -24,7 +25,10 @@ if __name__ == '__main__' :
     parameters = parse_param_file(args.para)
     pairs =  parse_pairwise_alignments(args.seq)
     dotaligner = args.dotaligner
-    da = DotAlignerGrouped(dotaligner, 'src/dotaligner_shell_scripts/')
+    directory = 'src/dotaligner_shell_scripts/'
+    if not os.path.exists(directory):
+        os.makedirs(directory)
+    da = DotAlignerGrouped(dotaligner, directory)
     da.add_pairs(pairs)
     da.add_prefix_pairs('data/ps')
     da.update_parameters(parameters)
