@@ -8,9 +8,9 @@ from dotalignerWrapper.parameterFileParser import parse_param_file, parse_pairwi
 
 parser = argparse.ArgumentParser(description='Dotaligner Wrapper - Current only print bash scripts ')
 
-parser.add_argument('-s' , '--seq' , help = "pairwise alignment list")
-parser.add_argument('-p' , '--para' , help = "parameter files")
-parser.add_argument('-d' , '--dotaligner', help = 'path to the dotaligner')
+parser.add_argument('-s' , '--seq' , help = "pairwise alignment list", required=True)
+parser.add_argument('-p' , '--para' , help = "parameter files", required=True)
+parser.add_argument('-d' , '--dotaligner', help = 'path to the dotaligner', required=True)
 
 
 
