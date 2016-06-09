@@ -119,8 +119,8 @@
           <file leaf-file-name="dotalignerWrapper.py" pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/src/dotalignerWrapper/dotalignerWrapper.py">
               <provider selected="true" editor-type-id="text-editor">
-                <state vertical-scroll-proportion="0.8554839">
-                  <caret line="55" column="30" selection-start-line="55" selection-start-column="30" selection-end-line="55" selection-end-column="30" />
+                <state vertical-scroll-proportion="0.11096774">
+                  <caret line="62" column="40" selection-start-line="62" selection-start-column="40" selection-end-line="62" selection-end-column="40" />
                   <folding>
                     <element signature="e#1#10#0" expanded="true" />
                   </folding>
@@ -135,8 +135,8 @@
           <file leaf-file-name="test_parameterFileParser.py" pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/src/dotalignerWrapper/test_parameterFileParser.py">
               <provider selected="true" editor-type-id="text-editor">
-                <state vertical-scroll-proportion="-1.9419355">
-                  <caret line="35" column="51" selection-start-line="35" selection-start-column="51" selection-end-line="35" selection-end-column="51" />
+                <state vertical-scroll-proportion="0.68377256">
+                  <caret line="143" column="81" selection-start-line="143" selection-start-column="79" selection-end-line="143" selection-end-column="81" />
                   <folding>
                     <element signature="e#0#15#0" expanded="true" />
                   </folding>
@@ -164,11 +164,11 @@
         <option value="$PROJECT_DIR$/src/dotalignerWrapper/test_paramterFileParsers.py" />
         <option value="$PROJECT_DIR$/src/__init__.py" />
         <option value="$PROJECT_DIR$/generate_shell_script.snakmake" />
-        <option value="$PROJECT_DIR$/src/dotalignerWrapper/test_parameterFileParser.py" />
         <option value="$PROJECT_DIR$/src/dotalignerWrapper/parameterFileParser.py" />
         <option value="$PROJECT_DIR$/data/parameters_list.txt" />
         <option value="$PROJECT_DIR$/src/generate_dotaligner_script.py" />
         <option value="$PROJECT_DIR$/src/dotalignerWrapper/dotalignerWrapper.py" />
+        <option value="$PROJECT_DIR$/src/dotalignerWrapper/test_parameterFileParser.py" />
       </list>
     </option>
   </component>
@@ -592,16 +592,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/dotalignerWrapper/test_parameterFileParser.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="46" column="33" selection-start-line="46" selection-start-column="33" selection-end-line="46" selection-end-column="33" />
-          <folding>
-            <element signature="e#0#15#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/dotalignerWrapper/parameterFileParser.py">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -622,10 +612,20 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/dotalignerWrapper/test_parameterFileParser.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="46" column="33" selection-start-line="46" selection-start-column="33" selection-end-line="46" selection-end-column="33" />
+          <folding>
+            <element signature="e#0#15#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/dotalignerWrapper/dotalignerWrapper.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.8554839">
-          <caret line="55" column="30" selection-start-line="55" selection-start-column="30" selection-end-line="55" selection-end-column="30" />
+        <state vertical-scroll-proportion="0.11096774">
+          <caret line="62" column="40" selection-start-line="62" selection-start-column="40" selection-end-line="62" selection-end-column="40" />
           <folding>
             <element signature="e#1#10#0" expanded="true" />
           </folding>
