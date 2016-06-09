@@ -119,8 +119,8 @@
           <file leaf-file-name="dotalignerWrapper.py" pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/src/dotalignerWrapper/dotalignerWrapper.py">
               <provider selected="true" editor-type-id="text-editor">
-                <state vertical-scroll-proportion="0.60286456">
-                  <caret line="57" column="85" selection-start-line="57" selection-start-column="85" selection-end-line="57" selection-end-column="85" />
+                <state vertical-scroll-proportion="0.5859375">
+                  <caret line="56" column="63" selection-start-line="56" selection-start-column="63" selection-end-line="56" selection-end-column="63" />
                   <folding>
                     <element signature="e#1#10#0" expanded="true" />
                   </folding>
@@ -135,8 +135,8 @@
           <file leaf-file-name="test_parameterFileParser.py" pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/src/dotalignerWrapper/test_parameterFileParser.py">
               <provider selected="true" editor-type-id="text-editor">
-                <state vertical-scroll-proportion="0.5390625">
-                  <caret line="104" column="99" selection-start-line="104" selection-start-column="99" selection-end-line="104" selection-end-column="99" />
+                <state vertical-scroll-proportion="0.8359375">
+                  <caret line="143" column="43" selection-start-line="143" selection-start-column="43" selection-end-line="143" selection-end-column="43" />
                   <folding>
                     <element signature="e#0#15#0" expanded="true" />
                   </folding>
@@ -614,8 +614,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/dotalignerWrapper/dotalignerWrapper.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.60286456">
-          <caret line="57" column="85" selection-start-line="57" selection-start-column="85" selection-end-line="57" selection-end-column="85" />
+        <state vertical-scroll-proportion="0.5859375">
+          <caret line="56" column="63" selection-start-line="56" selection-start-column="63" selection-end-line="56" selection-end-column="63" />
           <folding>
             <element signature="e#1#10#0" expanded="true" />
           </folding>
@@ -624,8 +624,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/dotalignerWrapper/test_parameterFileParser.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.5390625">
-          <caret line="104" column="99" selection-start-line="104" selection-start-column="99" selection-end-line="104" selection-end-column="99" />
+        <state vertical-scroll-proportion="0.8359375">
+          <caret line="143" column="43" selection-start-line="143" selection-start-column="43" selection-end-line="143" selection-end-column="43" />
           <folding>
             <element signature="e#0#15#0" expanded="true" />
           </folding>

@@ -102,7 +102,7 @@ class TestDotAlignerWrapper(unittest.TestCase):
                 da.add_pairs([['a', 'b']])
                 da.generate_and_run()
                 dot_mock.assert_called_with(
-                    "(time -f '\t%E\t%M' /found -k 0.5 -t 0.5 -o 1 -e 0.2 -s 10 -T 1 -d a_dp.pp -d b_dp.pp; ) >> out/k_0.5-t_0.5-o_1-e_0.2-T_1.dotaligner.out 2>&1",
+                    "(time -f '\\t%E\\t%M' /found -k 0.5 -t 0.5 -o 1 -e 0.2 -s 10 -T 1 -d a_dp.pp -d b_dp.pp; ) >> out/k_0.5-t_0.5-o_1-e_0.2-T_1.dotaligner.out 2>&1",
                     ['a','b'],
                     OrderedDict([('e', '0.2'), ('o', '1'), ('t', '0.5'), ('k', '0.5'), ('T', '1'), ('S', '10')])
                 )
@@ -138,10 +138,10 @@ class TestDotAlignerGrouped(unittest.TestCase):
                 fh.assert_has_calls(calls_list, any_order=True)
                 handle = fh()
                 calls_list =  [
-                    calls("(time -f '\t%E\t%M' /found -k 0.5 -t 0.5 -o 1 -e 10 -s 10 -T 1 -d a_dp.pp -d b_dp.pp; ) >> out/k_0.5-t_0.5-o_1-e_10-T_1.dotaligner.out 2>&1\n" +\
-                          "(time -f '\t%E\t%M' /found -k 0.5 -t 0.5 -o 1 -e 10 -s 10 -T 1 -d b_dp.pp -d c_dp.pp; ) >> out/k_0.5-t_0.5-o_1-e_10-T_1.dotaligner.out 2>&1"),
-                    calls("(time -f '\t%E\t%M' /found -k 0.5 -t 0.5 -o 1 -e 20 -s 10 -T 1 -d a_dp.pp -d b_dp.pp; ) >> out/k_0.5-t_0.5-o_1-e_20-T_1.dotaligner.out 2>&1\n" +\
-                          "(time -f '\t%E\t%M' /found -k 0.5 -t 0.5 -o 1 -e 20 -s 10 -T 1 -d b_dp.pp -d c_dp.pp; ) >> out/k_0.5-t_0.5-o_1-e_20-T_1.dotaligner.out 2>&1")
+                    calls("(time -f '\\t%E\\t%M' /found -k 0.5 -t 0.5 -o 1 -e 10 -s 10 -T 1 -d a_dp.pp -d b_dp.pp; ) >> out/k_0.5-t_0.5-o_1-e_10-T_1.dotaligner.out 2>&1\n" +\
+                          "(time -f '\\t%E\\t%M' /found -k 0.5 -t 0.5 -o 1 -e 10 -s 10 -T 1 -d b_dp.pp -d c_dp.pp; ) >> out/k_0.5-t_0.5-o_1-e_10-T_1.dotaligner.out 2>&1"),
+                    calls("(time -f '\\t%E\\t%M' /found -k 0.5 -t 0.5 -o 1 -e 20 -s 10 -T 1 -d a_dp.pp -d b_dp.pp; ) >> out/k_0.5-t_0.5-o_1-e_20-T_1.dotaligner.out 2>&1\n" +\
+                          "(time -f '\\t%E\\t%M' /found -k 0.5 -t 0.5 -o 1 -e 20 -s 10 -T 1 -d b_dp.pp -d c_dp.pp; ) >> out/k_0.5-t_0.5-o_1-e_20-T_1.dotaligner.out 2>&1")
                 ]
                 handle.write.assert_has_calls(calls_list)
 
