@@ -24,7 +24,7 @@ if not os.path.exists('data/logs'):
     os.makedirs('data/logs')
 
 
-if __name__ == '__main___':
+if __name__ == '__main__':
     parser = argparse.ArgumentParser(description= " Sinker for ventalitor")
     parser.add_argument('-r', '--receiver', help=' port to listen to' )
     args = parser.parse_args()

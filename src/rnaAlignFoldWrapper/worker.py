@@ -3,12 +3,13 @@ __author__ = 'xiuchengquek'
 
 import sys
 import time
-import zmq
+
 import argparse
 from rnaFoldRunner import read_and_run
+    import zmq
 
 
-if __name__ == '__main___':
+if __name__ == '__main__':
     parser = argparse.ArgumentParser(description= " Worer for RNAAlign + ClustalW. Enter listen port and sinker ip")
     parser.add_argument('-s', '--sinker', help=' sinkerip' )
     parser.add_argument('-v', '--vent', help="vent ip")

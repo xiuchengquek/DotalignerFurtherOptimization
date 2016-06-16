@@ -19,7 +19,7 @@ def load_sample_list(directory):
     return dotaligner_output
 
 
-if __name__ == '__main__' :
+if __name__ == '__main__':
 
     parser = argparse.ArgumentParser(description='Please PLce sinker and worker port')
     parser.add_argument('-w', '--worker' ,help="worker port")
