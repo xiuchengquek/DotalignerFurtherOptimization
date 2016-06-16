@@ -10,7 +10,7 @@ from rnaFoldRunner import read_and_run
 if __name__ == '__main___':
     parser = argparse.ArgumentParser(description= " Worer for RNAAlign + ClustalW. Enter listen port and sinker ip")
     parser.add_argument('-s', '--sinker', help=' sinkerip' )
-    parser.add_argument('vent ip', '--vent', help="vent ip")
+    parser.add_argument('-v', '--vent', help="vent ip")
     args = parser.parse_args()
 
     reciever_ip = args.vent
