@@ -6,7 +6,7 @@ import time
 
 import argparse
 from rnaFoldRunner import read_and_run
-    import zmq
+import zmq
 
 
 if __name__ == '__main__':
@@ -15,7 +15,7 @@ if __name__ == '__main__':
     parser.add_argument('-v', '--vent', help="vent ip")
     args = parser.parse_args()
 
-    reciever_ip = args.vent
+    reciever_ip =  args.vent
     sinker_ip = args.sinker
     context = zmq.Context()
 
