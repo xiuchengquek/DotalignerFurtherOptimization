@@ -104,6 +104,6 @@ if __name__ == "__main__":
     parser.add_argument('-r', '--ref' ,help="reference score")
     parser.add_argument('-s', '--sci' ,help='sci file')
     args = parser.parse_args()
-    read_and_find(args.ref, args.s)
+    read_and_find(args.ref, args.sci)
 
 
