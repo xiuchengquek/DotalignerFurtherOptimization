@@ -107,8 +107,6 @@ class TestDotAlignerWrapper(unittest.TestCase):
                     OrderedDict([('e', '0.2'), ('o', '1'), ('t', '0.5'), ('k', '0.5'), ('T', '1'), ('S', '10')])
                 )
 
-
-
 class TestDotAlignerGrouped(unittest.TestCase):
     def side_effect(self, file_name):
         if file_name == '/found':

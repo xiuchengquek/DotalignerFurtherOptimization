@@ -99,11 +99,11 @@ def read_and_find(reference, dotaligner):
 
 
 
+if __name__ == "__main__":
+    parser = argparse.ArgumentParser(description='Add combination and find difference between sci - refsci')
+    parser.add_argument('-r', '--ref' ,help="reference score")
+    parser.add_argument('-s', '--sci' ,help='sci file')
+    args = parser.parse_args()
+    read_and_find(args.ref, args.s)
 
 
-
-
-def tdd_read_and_find(reference, dotaligner):
-    reference_sci = sciEntry.from_reference(reference)
-    reference_sci = {x.id : x for x in reference_sci}
-    return reference_sci
