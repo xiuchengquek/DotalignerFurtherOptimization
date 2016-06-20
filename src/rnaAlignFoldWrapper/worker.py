@@ -6,7 +6,7 @@ import time
 
 import argparse
 from rnaFoldRunner import read_and_run
-    import zmq
+import zmq
 
 
 if __name__ == '__main__':
