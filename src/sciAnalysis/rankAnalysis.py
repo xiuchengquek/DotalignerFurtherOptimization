@@ -3,6 +3,8 @@
 
 from collections import deque, defaultdict, Counter, OrderedDict
 import csv
+import argparse
+
 
 class combinationRankBySequence:
 
@@ -82,6 +84,15 @@ def main_run(merged_sci_diff, output):
 
 
 
+if __name__ == '__main__':
+    parser = argparse.ArgumentParser
+    parser.add_argument('-m', '--mergedfile', 'merged sci file')
+    parser.add_argument('-o', '--output', 'output file')
+
+    args = parser.parse_args()
+
+
+    main_run(args.mergedfile, args.output)
 
 
 
