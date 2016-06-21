@@ -80,8 +80,6 @@ if __name__ == "__main__":
     parser.add_argument('-c', '--com' ,help='combination index')
 
     args = parser.parse_args()
-
-
     sci = SciDiffAnalysis(args.dir)
     sci.read_and_count_write(args.out)
     sci.write_sequence(args.seq)
