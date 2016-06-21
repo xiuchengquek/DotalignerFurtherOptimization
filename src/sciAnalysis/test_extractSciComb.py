@@ -2,7 +2,9 @@ import unittest
 from unittest import mock
 from unittest.mock import patch, MagicMock
 
-from extractSciComb import sciEntry, read_and_find, tdd_read_and_find
+from extractSciComb import sciEntry, read_and_find
+from SciDiffAnalysis import SciDiffAnalysis
+from collections import OrderedDict
 
 
 
@@ -99,10 +101,6 @@ class testSciEntry(unittest.TestCase):
         self.assertEqual(sciC.sequence_b, 'seqB')
         self.assertEqual(sciC.sci, -0.1)
 
-
-
-
-
     def test_clean_sequence_name(self):
         sequence_name = 'data/ps/seqA_dp.pp'
         clean_sequence_name= sciEntry.clean_sequence_name(sequence_name)
@@ -150,11 +148,101 @@ class testReadAndFind(unittest.TestCase):
             calls('e\to\tt\tk\tT\tS\tSequenceA\tSequenceB\tsci-diff\n'),
             calls('0.05\t1\t0.4\t0.1\t10\t50\tseqA\tseqB\t-0.800000\n')
         ]
-
         fh3 = handle3()
-        print(fh3.write.mock_calls)
         fh3.write.assert_has_calls(calls_list, any_order=False)
 
+class SciDiffAnalysisTest(unittest.TestCase):
+
+    def setUp(self):
+        self.example_row = OrderedDict(
+            [('e' , '0.05'),
+            ('o', '1'),
+            ('t',  '0.4'),
+            ('k', '0.1'),
+            ('T', '10'),
+            ('S', '1'),
+            ('SequenceA', 'SeqA'),
+            ('SequenceB', 'SeqB'),
+            ('sci-diff', '-1')]
+        )
+        self.parameters = ['e','o','t','k','T','S']
+        self.files = ['file.sci', 'file.sci.diff', 'file2.sci.diff']
+
+
+
+
+
+    def test_init(self):
+        m_list = MagicMock(return_value = self.files)
+        with mock.patch('os.listdir',  m_list) as m :
+            sci_diff_analysis = SciDiffAnalysis('mockdir', self.parameters)
+            self.assertListEqual(sci_diff_analysis.files, [ 'mockdir/file.sci.diff', 'mockdir/file2.sci.diff'])
+            self.assertListEqual(sci_diff_analysis.parameters, ['e','o','t','k','T','S'])
+            self.assertEqual(sci_diff_analysis.combinations, {})
+            self.assertEqual(sci_diff_analysis.sequence_pair, {})
+            self.assertEqual(sci_diff_analysis.combination_counter, 0)
+            self.assertEqual(sci_diff_analysis.sequence_counter, 0)
+
+    def test_get_combination(self):
+        m_list = MagicMock(return_value = self.files)
+        with mock.patch('os.listdir',  m_list) as m :
+            sci_diff_analysis = SciDiffAnalysis('mockdir', self.parameters)
+            combination = sci_diff_analysis.get_combination(self.example_row)
+            self.assertEqual(combination, '0.05\t1\t0.4\t0.1\t10\t1')
+
+            entry_index = sci_diff_analysis.add_to_combination(combination)
+            self.assertEqual(entry_index, 1)
+
+            entry_index = sci_diff_analysis.add_to_combination(combination)
+            self.assertEqual(entry_index,1)
+
+            combination_2 = '0.10\t2\t0.1\t1\t1'
+            entry_index = sci_diff_analysis.add_to_combination(combination_2)
+            self.assertEqual(entry_index, 2)
+
+
+
+        fh_out = unittest.mock.mock_open(read_data = "\n".join(['index\te\to\tt\tk\tT\tS', '1\t0.05\t1\t0.4\t0.1\t10\t1', '2\t0.10\t2\t0.1\t1\t1']))
+        call = unittest.mock.call
+
+        with mock.patch('builtins.open', fh_out) as m:
+            sci_diff_analysis.write_combination('combination.index.txt')
+            fo = m()
+            fo.write.assert_has_calls(
+                [call('index\te\to\tt\tk\tT\tS\n'),
+                 call('1\t0.05\t1\t0.4\t0.1\t10\t1\n'),
+                 call('2\t0.10\t2\t0.1\t1\t1\n')
+                ]
+            )
+
+
+
+    def test_get_add_write_sequence(self):
+        m_list = MagicMock(return_value = self.files)
+
+        with mock.patch('os.listdir',  m_list) as m :
+            sci_diff_analysis = SciDiffAnalysis('mockdir', self.parameters)
+
+            sequence_name = sci_diff_analysis.get_sequence_pair(self.example_row)
+            self.assertEqual(sequence_name, 'SeqA\tSeqB')
+
+            entry_index = sci_diff_analysis.add_to_sequence_pair(sequence_name)
+            self.assertEqual(entry_index, 1 )
+
+            entry_index = sci_diff_analysis.add_to_sequence_pair(sequence_name)
+            self.assertEqual(entry_index, 1 )
+
+            entry_index = sci_diff_analysis.add_to_sequence_pair('SeqC\tSeqD')
+            self.assertEqual(entry_index, 2)
+
+        fh_out = unittest.mock.mock_open(read_data="\n".join(['index\tSequenceA\tSequenceB', '1\tSeqA\tSeqB', '2\tSeqC\tSeqD']))
+        call = unittest.mock.call
+        with mock.patch('builtins.open', fh_out ) as m:
+            sci_diff_analysis.write_sequence('seq.index.txt')
+            fo = m()
+            fo.write.assert_has_calls(
+                [call('index\tSequenceA\tSequenceB\n'),call('1\tSeqA\tSeqB\n'), call('2\tSeqC\tSeqD\n')]
+            )
 
 
 
@@ -162,19 +250,52 @@ class testReadAndFind(unittest.TestCase):
 
 
 
+    @patch('builtins.open', spec=open)
+    def test_read_and_count(self, mock_open):
+
+        header = 'e\to\tt\tk\tT\tS\tSequenceA\tSequenceB\tsci-diff'
+        file1_content = [ header, '0.05\t1\t0.5\t1\t1\t1\tSeqA\tSeqB\t1',  '0.05\t1\t0.5\t1\t1\t1\tSeqB\tSeqC\t1']
+        file2_content = [ header, '0.05\t2\t0.5\t2\t1\t1\tSeqA\tSeqB\t1',  '0.05\t2\t0.5\t2\t1\t1\tSeqB\tSeqC\t1']
+
+        handle1 = unittest.mock.mock_open(read_data="\n".join(file1_content))
+        handle1.return_value.__iter__ = lambda self: self
+        handle1.return_value.__next__ = lambda self: self.readline()
+
+        handle2 = unittest.mock.mock_open(read_data="\n".join(file2_content))
+        handle2.return_value.__iter__ = lambda self: self
+        handle2.return_value.__next__ = lambda self: self.readline()
+        handle3 = unittest.mock.mock_open()
+
+        mock_open.side_effect = (handle3.return_value, handle1.return_value, handle2.return_value)
+        m_list = MagicMock(return_value = self.files)
+        with mock.patch('os.listdir',  m_list) as m :
+            sci_diff_obj = SciDiffAnalysis('mocks', self.parameters)
+            sci_diff_obj.read_and_count_write('output.txt')
+
+        call = unittest.mock.call
 
 
+        file_open_calls = [
+            call('output.txt', 'w'),
+            call('mocks/file.sci.diff', 'r'),
+            call('mocks/file2.sci.diff', 'r')
 
 
+        ]
 
+        mock_open.assert_has_calls(file_open_calls)
 
+        fh_out = handle3()
+        fh_out.write.assert_has_calls(
+            [
+                call('combination\tsequence\tsci-diff\n'),
+                call('1\t1\t1\n'),
+                call('1\t2\t1\n'),
+                call('2\t1\t1\n'),
+                call('2\t2\t1\n')
 
-
-
-
-
-
-
+            ]
+        )
 
 
 if __name__ == '__main__':

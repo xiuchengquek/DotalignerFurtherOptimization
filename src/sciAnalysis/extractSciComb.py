@@ -5,7 +5,7 @@
 import os
 import argparse
 import csv
-from collections import OrderedDict
+from collections import OrderedDict, Counter
 
 
 class sciEntry:
@@ -67,10 +67,6 @@ class sciEntry:
 
         diff = self.sci - other.sci
         return sciEntry(self.sequence_a, self.sequence_b, diff, True)
-
-
-
-
 
 def read_and_find(reference, dotaligner):
     reference_sci = sciEntry.from_reference(reference)
