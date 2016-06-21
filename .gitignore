@@ -6,3 +6,4 @@ src/dotaligner_shell_scripts/
 snakejob.*
 out/*.out
 .snakemake/
+out/merged/*

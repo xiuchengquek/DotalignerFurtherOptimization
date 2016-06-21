@@ -16,7 +16,7 @@ rule run_sci_diff_analysis:
 
 rule create_indexes:
     input :sci_files
-    output : com = 'out/merged/combination.index.txt' , out = 'out/merged/merged_sci_diff.txt', seq ='out/merged/merged/seq.index.txt'
+    output : com = 'out/merged/combination.index.txt' , out = 'out/merged/merged_sci_diff.txt', seq ='out/merged/seq.index.txt'
     shell : 'python src/sciAnalysis/SciDiffAnalysis.py -d out/dotaligner_out -o {output.out} -c {output.com} -s {output.seq}'
 
 

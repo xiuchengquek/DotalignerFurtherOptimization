@@ -80,7 +80,7 @@ if __name__ == "__main__":
     parser.add_argument('-c', '--com' ,help='combination index')
 
     args = parser.parse_args()
-    sci = SciDiffAnalysis(args.dir)
+    sci = SciDiffAnalysis(args.dir, ['e','o','t','k','T','S'])
     sci.read_and_count_write(args.out)
     sci.write_sequence(args.seq)
     sci.write_combination(args.com)
