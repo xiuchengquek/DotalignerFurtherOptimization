@@ -1,0 +1,67 @@
+---
+title: "FurtherOptimizationSci"
+author: "xiucheng quek"
+date: "22 June 2016"
+output: word_document
+---
+
+
+Read in tables, there are 3 tables. `ranked.tsv` contains the cumulative score of the top parameters. `combination.index.txt` contains the table that maps the combination the the combination_id in `ranked.tsv`. `seq.index.txt` containst the index for the sequence pair
+
+
+```{r}
+rankTable <- read.table('ranked.tsv', sep='\t', header=TRUE)
+comb <- read.table('combination.index.txt', sep='\t', header=TRUE)
+seq_pair <- read.table('seq.index.txt', sep='\t', header=TRUE)
+```
+
+
+## Get the top 10 sci score
+
+
+```{r}
+
+mergedTable <- merge(rankTable, comb, by.x='combination', by.y='index')
+mergedTable <- mergedTable[order(mergedTable$score),]
+write.table(head(mergedTable, n = 100) , file='top100.tsv', sep ='\t', quote = F, col.names =F, row.names = F)
+
+```
+
+## Factor Analysis to Confirm findgs
+
+Based on the rank score above, it appears that varying T and S has no impact on the SCI score. t of 0.4 should be used instesad
+
+To confirm our findings, I did a factor analysis using anova
+
+
+```{r}
+# First read in table containing sci score
+sci_scores <- read.table('merged_sci_diff.txt', sep='\t', header=TRUE)
+# factorize 
+as.factor(sci_scores$sequence) -> sci_scores$sequence
+as.factor(sci_scores$combination) -> sci_scores$combination
+## merged data
+
+
+
+merged_scores <- merge(sci_scores, comb, by.x='combination', by.y ='index')
+```
+
+Due to the large number of combination of factors, I did one way anova for first without testing for factors independence. They will be corrected using tukey honestly significant difference test for multiple comparisions for each factors
+
+
+# One way anova 
+
+Appears only that variance f T values score are different.
+```{r}
+taov<-aov(sci.diff ~ as.factor(t) + as.factor(S) + as.factor(T) + as.factor(k), data = merged_scores)
+TukeyHSD(taov)
+```
+## Lets make sure that we are not violating assumptions of annova test 
+
+
+
+
+
+
+Note that the `echo = FALSE` parameter was added to the code chunk to prevent printing of the R code that generated the plot.

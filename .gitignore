@@ -7,3 +7,4 @@ snakejob.*
 out/*.out
 .snakemake/
 out/merged/*
+.Rproj.user
