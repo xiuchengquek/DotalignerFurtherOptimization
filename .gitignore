@@ -1,3 +1,6 @@
+src/DotalignerGraphs/*.tsv
+src/DotalignerGraphs/seq.index.txt
+src/DotalignerGraphs/combination.index.txt
 .idea/
 venv
 data/ps
