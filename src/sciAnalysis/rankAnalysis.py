@@ -85,8 +85,13 @@ def main_run(merged_sci_diff, output):
 
 
 if __name__ == '__main__':
+<<<<<<< Updated upstream
     parser = argparse.ArgumentParser(description='rank')
     parser.add_argument('-m', '--mergedfile', help='merged sci file')
+=======
+    parser = argparse.ArgumentParser
+    parser.add_argument('-m', '--mergedfile', help= 'merged sci file')
+>>>>>>> Stashed changes
     parser.add_argument('-o', '--output', help='output file')
 
     args = parser.parse_args()
